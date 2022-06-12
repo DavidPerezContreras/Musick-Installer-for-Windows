@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesmurgi.proyectolevidaviddam.Controllers.ChatController">
+   <children>
+      <VBox fx:id="vboxContainer" alignment="CENTER" maxHeight="800.0" maxWidth="1600.0" minHeight="600.0" styleClass="card" stylesheets="@css/main.css">
+         <children>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <ScrollPane fx:id="chatContainer" minHeight="400.0" minWidth="400.0">
+                     <content>
+                        <VBox fx:id="chatBox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white;" />
+                     </content>
+                  </ScrollPane>
+                  <ImageView fitHeight="22.0" fitWidth="88.0" onMouseClicked="#scrollDown" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/kisspng-arrow-computer-icons-down-arrow-5ac2c83353d143.1682659215227146753433.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER" spacing="50.0" stylesheets="@css/main.css">
+               <children>
+                  <TextField fx:id="textfieldMessages" onAction="#sendMessagesByKey" prefHeight="35.0" prefWidth="564.0" styleClass="text-field" />
+                  <Button mnemonicParsing="false" onMouseClicked="#sendMessage" styleClass="button-default" text="Enviar" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

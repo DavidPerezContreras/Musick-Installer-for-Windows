@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainContainer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="720.0" minWidth="1200.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="container" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesmurgi.proyectolevidaviddam.Controllers.HelloController">
+   <HBox fx:id="hboxTopMenu" maxHeight="79.0" minHeight="79.0" prefHeight="79.0" prefWidth="1928.0" spacing="5.0" style="-fx-background-color: #0b1533;" stylesheets="@css/main.css">
+      <children>
+         <HBox maxWidth="740.0" spacing="5.0">
+            <children>
+               <ImageView fitHeight="81.0" fitWidth="140.0" pickOnBounds="true">
+                  <image>
+                     <Image url="@images/BitStore_Logo.png" />
+                  </image>
+               </ImageView>
+               <HBox alignment="CENTER" maxHeight="81.0" minHeight="81.0" minWidth="200.0" onMouseClicked="#loadHomePage" onMouseEntered="#onMenuItemEnter" onMouseExited="#onMenuItemExited" prefHeight="100.0" prefWidth="200.0" styleClass="botonMainMenu" stylesheets="@css/cssmenu.css">
+                  <children>
+                     <Label fx:id="labelTopMenu1" text="Inicio" textFill="WHITE">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox fx:id="topProfileButton" alignment="CENTER" maxHeight="81.0" minHeight="81.0" minWidth="200.0" onMouseEntered="#onMenuItemEnter" onMouseExited="#onMenuItemExited" prefHeight="100.0" prefWidth="200.0" styleClass="botonMainMenu" stylesheets="@css/cssmenu.css">
+                  <children>
+                     <Label fx:id="labelTopMenu2" text="Perfil" textFill="WHITE">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER" maxHeight="81.0" minHeight="81.0" minWidth="200.0" onMouseClicked="#loadContactsPage" onMouseEntered="#onMenuItemEnter" onMouseExited="#onMenuItemExited" prefHeight="100.0" prefWidth="200.0" styleClass="botonMainMenu" stylesheets="@css/cssmenu.css">
+                  <children>
+                     <Label fx:id="labelTopMenu3" text="Contactos" textFill="WHITE">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+               </HBox>
+            </children>
+         </HBox>
+         <HBox alignment="TOP_RIGHT" maxHeight="81.0" maxWidth="1.7976931348623157E308" prefHeight="81.0" prefWidth="1176.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+            <children>
+               <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #1c3787;" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Pane minWidth="305.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="79.0">
+                        <children>
+                           <HBox alignment="CENTER" layoutX="9.0" layoutY="6.0" maxWidth="1.7976931348623157E308" prefHeight="80.0" spacing="30.0">
+                              <children>
+                                 <HBox style="-fx-background-color: white;">
+                                    <children>
+                                       <ImageView fx:id="imageviewProfileImage" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" style="-fx-background-color: white;">
+                                          <image>
+                                             <Image url="@images/Sample_User_Icon.png" />
+                                          </image>
+                                       </ImageView>
+                                    </children>
+                                 </HBox>
+                                 <Hyperlink fx:id="hyperlinkUser" style="-fx-border-color: #1c3787; -fx-text-fill: #e45926; -fx-font-weight: bold; -fx-font-size: 31;" text="eeeeeeeee">
+                                    <font>
+                                       <Font size="30.0" />
+                                    </font>
+                                 </Hyperlink>
+                              </children>
+                           </HBox>
+                        </children>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Pane>
+                  </children></HBox>
+            </children>
+         </HBox>
+      </children>
+   </HBox>
+   <StackPane fx:id="baseRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+      <children>
+         <GridPane fx:id="contentRoot" gridLinesVisible="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="container" stylesheets="@css/main.css">
+            <columnConstraints>
+               <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+               <VBox fx:id="pageRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.vgrow="SOMETIMES">
+                  <padding>
+                     <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                  </padding>
+               </VBox>
+            </children>
+            <StackPane.margin>
+               <Insets />
+            </StackPane.margin>
+         </GridPane>
+         <GridPane alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pickOnBounds="false">
+            <columnConstraints>
+               <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" />
+               <ColumnConstraints fx:id="columnConstraints3" hgrow="ALWAYS" maxWidth="729.0" minWidth="305.0" prefWidth="305.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="ALWAYS" />
+               <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="ALWAYS" />
+               <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+               <VBox fx:id="chatSlider" alignment="BOTTOM_LEFT" onMouseEntered="#slideChatSlider" onMouseExited="#slideChatSliderExited" prefHeight="200.0" prefWidth="243.0" style="-fx-background-color: #1c3787;" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowSpan="3" GridPane.vgrow="ALWAYS">
+                  <padding>
+                     <Insets bottom="25.0" />
+                  </padding>
+                  <children>
+                     <HBox fx:id="aboutButton" alignment="CENTER_LEFT" onMouseEntered="#onSlideHoverEnter" onMouseExited="#onSlideHoverExited" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Label fx:id="tileSettings4" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" text="Acerca de" textFill="WHITE">
+                              <font>
+                                 <Font size="36.0" />
+                              </font>
+                              <HBox.margin>
+                                 <Insets left="39.0" />
+                              </HBox.margin>
+                           </Label>
+                        </children>
+                     </HBox>
+                     <HBox fx:id="uploadButton" alignment="CENTER_LEFT" onMouseEntered="#onSlideHoverEnter" onMouseExited="#onSlideHoverExited" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Label fx:id="tileSettings" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" text="Subir" textFill="WHITE">
+                              <font>
+                                 <Font size="36.0" />
+                              </font>
+                              <HBox.margin>
+                                 <Insets left="39.0" />
+                              </HBox.margin>
+                           </Label>
+                        </children>
+                     </HBox>
+                     <HBox fx:id="profileButton" alignment="CENTER_LEFT" onMouseEntered="#onSlideHoverEnter" onMouseExited="#onSlideHoverExited" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Label fx:id="tileSettings1" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" text="Perfil" textFill="WHITE">
+                              <font>
+                                 <Font size="36.0" />
+                              </font>
+                              <HBox.margin>
+                                 <Insets left="39.0" />
+                              </HBox.margin>
+                           </Label>
+                        </children>
+                     </HBox>
+                     <HBox fx:id="settingsButton" alignment="CENTER_LEFT" onMouseEntered="#onSlideHoverEnter" onMouseExited="#onSlideHoverExited" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Label fx:id="tileSettings2" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" text="Ajustes" textFill="WHITE">
+                              <font>
+                                 <Font size="36.0" />
+                              </font>
+                              <HBox.margin>
+                                 <Insets left="39.0" />
+                              </HBox.margin>
+                           </Label>
+                        </children>
+                     </HBox>
+                     <HBox alignment="CENTER_LEFT" onMouseClicked="#logout" onMouseEntered="#onSlideHoverEnter" onMouseExited="#onSlideHoverExited" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Label fx:id="tileSettings3" onMousePressed="#onSliderPressed" onMouseReleased="#onSliderReleased" text="Cerrar sesión" textFill="WHITE">
+                              <font>
+                                 <Font size="36.0" />
+                              </font>
+                              <HBox.margin>
+                                 <Insets left="39.0" />
+                              </HBox.margin>
+                           </Label>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+            </children>
+            <StackPane.margin>
+               <Insets />
+            </StackPane.margin>
+         </GridPane>
+      </children>
+   </StackPane>
+   <StackPane style="-fx-background-color: #e45926;">
+      <children>
+         <HBox minHeight="100.0" prefHeight="100.0" spacing="10.0" style="-fx-border: solid 20px blue; -fx-background-color: #1b1b1b;">
+            <StackPane.margin>
+               <Insets />
+            </StackPane.margin>
+            <children>
+               <ImageView fx:id="imageviewPlayer" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                  <HBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="40.0" top="5.0" />
+                  </HBox.margin>
+                  <cursor>
+                     <Cursor fx:constant="DISAPPEAR" />
+                  </cursor>
+               </ImageView>
+               <VBox maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label fx:id="labelSongNamePlayer" maxWidth="1.7976931348623157E308" textFill="WHITE">
+                        <font>
+                           <Font name="Sylfaen" size="40.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets bottom="-5.0" />
+                        </VBox.margin>
+                        <padding>
+                           <Insets top="6.0" />
+                        </padding>
+                     </Label>
+                     <Hyperlink fx:id="hyperlinkUsernamePlayer">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets bottom="10.0" />
+                        </VBox.margin></Hyperlink>
+                  </children>
+                  <HBox.margin>
+                     <Insets right="20.0" />
+                  </HBox.margin>
+               </VBox>
+               <VBox fx:id="vboxPlayer" maxHeight="1.7976931348623157E308" style="-fx-background-color: #1b1b1b;">
+                  <HBox.margin>
+                     <Insets right="50.0" />
+                  </HBox.margin>
+               </VBox>
+            </children>
+         </HBox>
+      </children>
+   </StackPane>
+</VBox>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBoxSignUp" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="891.0" spacing="20.0" styleClass="container" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesmurgi.proyectolevidaviddam.Controllers.SignUp">
+   <children>
+      <HBox alignment="CENTER" maxWidth="837.0" minHeight="700.0" prefHeight="700.0" prefWidth="837.0" styleClass="card">
+         <children>
+            <VBox fx:id="vBoxCard" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="597.0" prefWidth="420.0" spacing="15.0">
+               <children>
+                  <Label fx:id="lblNombre1" text="Nick:" textAlignment="CENTER" textFill="#fffdfd">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldNick" maxWidth="200.0" stylesheets="@css/main.css" />
+                  <Label fx:id="lblNombre" text="Nombre:" textAlignment="CENTER" textFill="#fffdfd">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldNombre" maxWidth="200.0" stylesheets="@css/main.css" />
+                  <Label fx:id="lblApellidos" text="Apellidos:" textAlignment="CENTER" textFill="#fffdfd">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldApellidos" maxWidth="200.0" stylesheets="@css/main.css" />
+                  <Label fx:id="lblCorreo" text="Correo:" textAlignment="CENTER" textFill="#fffdfd">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldCorreo" maxWidth="200.0" styleClass="text-field" stylesheets="@css/main.css" />
+                  <Label fx:id="lblContraseña" text="Contraseña:" textAlignment="CENTER" textFill="#fffdfd">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pwdContraseña" maxWidth="200.0" stylesheets="@css/main.css" />
+                  <Label fx:id="lblRepetirContraseña" text="Repetir contraseña:" textAlignment="CENTER" textFill="#fffdfd">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pwdRepetirContraseña" maxWidth="200.0" stylesheets="@css/main.css" />
+                  <Hyperlink fx:id="login" onMouseClicked="#login" text="¿Ya tienes cuenta? Iniciar sesión " />
+                  <Button fx:id="btnRegistrarse" mnemonicParsing="false" onAction="#signup" onMouseClicked="#signup" styleClass="buttons-item-play" text="Crear cuenta" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <ImageView fitHeight="171.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/user-3331257_1280.png" />
+               </image>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets top="-30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="2000.0">
+         <children>
+            <Label text="Al crear una cuenta aceptas los términos del " textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Label>
+            <Hyperlink fx:id="hyperlinkLicencia" text="acuerdo de licencia">
+               <HBox.margin>
+                  <Insets top="-3.0" />
+               </HBox.margin>
+            </Hyperlink>
+         </children>
+         <VBox.margin>
+            <Insets left="-276.0" top="-160.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="2000.0">
+         <children>
+            <Label text="y la " textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Label>
+            <Hyperlink fx:id="hyperlinkPrivacidad" text="política de privacidad.">
+               <HBox.margin>
+                  <Insets top="-3.0" />
+               </HBox.margin>
+            </Hyperlink>
+         </children>
+         <VBox.margin>
+            <Insets left="-276.0" top="-22.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" />
+   </padding>
+</VBox>

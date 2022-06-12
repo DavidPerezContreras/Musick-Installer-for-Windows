@@ -1,0 +1,15 @@
+.hyperlink:visited{
+    -fx-text-fill: #1895c8;
+    -fx-border-color: #ffffff;
+    -fx-underline: false;
+}
+.hyperlink:pressed{
+    -fx-text-fill: #1895c8;
+    -fx-border-color: #ffffff;
+    -fx-underline: false;
+}
+.hyperlink:hover{
+    -fx-text-fill: #28a5e8;
+    -fx-border-color: #222222;
+    -fx-underline: false;
+}
